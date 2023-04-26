@@ -1,0 +1,224 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0044)https://home.agh.edu.pl/~funika/mownit/lab5/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 9">
+<meta name="Originator" content="Microsoft Word 9">
+<link rel="File-List" href="https://home.agh.edu.pl/~funika/mownit/lab5/index_pliki/filelist.xml">
+<link rel="Edit-Time-Data" href="https://home.agh.edu.pl/~funika/mownit/lab5/index_pliki/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Metody Numeryczne</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>AGH Cyfronet</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>AGH Cyfronet</o:LastAuthor>
+  <o:Revision>14</o:Revision>
+  <o:TotalTime>240</o:TotalTime>
+  <o:Created>2009-12-07T21:15:00Z</o:Created>
+  <o:LastSaved>2010-12-14T21:17:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>115</o:Words>
+  <o:Characters>658</o:Characters>
+  <o:Company>AGH Cyfronet</o:Company>
+  <o:Lines>5</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>808</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	font-weight:bold;}
+h3
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:637228709;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1607622826 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l1
+	{mso-list-id:1612858458;
+	mso-list-type:hybrid;
+	mso-list-template-ids:201083088 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l2
+	{mso-list-id:1650865437;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1024396240 1733831982 -910371262 1257505116 1822317514 -901744242 -929640538 -1626978222 -1069879612 -2140099734;}
+@list l3
+	{mso-list-id:1860967823;
+	mso-list-type:hybrid;
+	mso-list-template-ids:937481116 -1591452462 1580879790 966949790 -719417560 -1924386828 501404406 -445761568 -442212924 -1839050496;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="papayawhip" lang="PL" link="blue" vlink="blue" style="tab-interval:35.4pt" class="vsc-initialized">
+
+<div class="Section1">
+
+<div align="center">
+
+<table border="0" cellpadding="0" width="80%" style="width:80.0%;mso-cellspacing:
+ 1.5pt;mso-padding-alt:0cm 0cm 0cm 0cm" height="90%">
+ <tbody><tr>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <div class="MsoNormal" align="center" style="text-align:center">
+  <hr size="2" width="100%" align="center">
+  </div>
+  <h1>MOWNIT <span style="mso-fareast-font-family:&quot;Arial Unicode MS&quot;"><o:p></o:p></span></h1>
+  <h1>Zestaw 5 - Całkowanie numeryczne</h1>
+  <div class="MsoNormal" align="center" style="text-align:center">
+  <hr size="2" width="100%" align="center">
+  </div>
+  <h3>Materiały</h3>
+  <ul type="disc">
+   <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><a href="http://www.integrals.com/">Integrator!</a> </li>
+   <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l3 level1 lfo3;tab-stops:list 36.0pt"><a href="http://home.agh.edu.pl/~funika/mownit/lab5/calkowanie.pdf">Całkowanie
+       numeryczne</a> </li>
+   <li class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l3 level1 lfo3;tab-stops:list 36.0pt">Dla
+       zainteresowanych: <a href="http://home.agh.edu.pl/~funika/mownit/lab5/what_is_gauss.html">całkowanie
+       Gaussa-Kronroda</a> </li>
+  </ul>
+  <h3>Zadania</h3>
+  <ol style="margin-top:0cm" start="1" type="1">
+   <li class="MsoNormal" style="mso-list:l1 level1 lfo6;tab-stops:list 36.0pt">Obliczyć
+       I =<span style="mso-spacerun: yes">&nbsp; </span><sub>0</sub>&#8747;<sup>1</sup>
+       1/(1+x) dx wg wzoru prostokątów, trapezów i wzoru Simpsona (zwykłego i
+       złożonego n=3, 5). Porównać wyniki i błędy.</li>
+   <li class="MsoNormal" style="mso-list:l1 level1 lfo6;tab-stops:list 36.0pt">Obliczyć
+       całkę I = <sub>-1</sub>&#8747;<sup>1 </sup>1/(1+x<sup>2</sup>) dx korzystając
+       z wielomianów ortogonalnych (np. Legendre&#8217;a) dla n=8.</li>
+  </ol>
+  <h3>Zadanie domowe </h3>
+  <ol start="1" type="1">
+   <li class="MsoNormal" style="mso-margin-top-alt:auto;margin-bottom:12.0pt;
+       mso-list:l2 level1 lfo9;tab-stops:list 36.0pt">Obliczyć całkę <sub>0</sub>&#8747;<sup>1
+       </sup>1/(1+x<sup>2</sup>) dx korzystając ze wzoru prostokątów, trapezów
+       i wzoru Simpsona dla h=0.1</li>
+   <li class="MsoNormal" style="mso-margin-top-alt:auto;margin-bottom:12.0pt;
+       mso-list:l2 level1 lfo9;tab-stops:list 36.0pt">Metodą Gaussa obliczyć
+       następującą całkę<span style="mso-spacerun: yes">&nbsp; </span><sub>0</sub>&#8747;<sup>1
+       </sup>1/(x+3) dx dla n=4. Oszacować resztę kwadratury.</li>
+  </ol>
+  <p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+</div>
+
+
+
+
+</body></html>
